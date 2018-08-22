@@ -4,6 +4,7 @@ import java.io.*;
 import javax.swing.*;
 
 public class Sim extends JFrame{
+  private Node[][] worldArray = new Node[50][50];
 
   public static void main(String args[]){
     new Sim();
@@ -23,4 +24,7 @@ public class Sim extends JFrame{
     setVisible(true);  
   }
   
+  public Node[][] getWorld(){
+    return worldArray;
+  }
 }
