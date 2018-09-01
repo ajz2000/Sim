@@ -75,6 +75,16 @@ public class Entity{
             map[n.getY() - 1][n.getX()].setG(newG);
             map[n.getY() - 1][n.getX()].setH(newH);
             map[n.getY() - 1][n.getX()].setLastNode(n);
+            
+            if(openList.isEmpty()){
+              openList.add(map[n.getY() - 1][n.getX()]);
+            } else {
+              int i = 0;
+              while(newF >= openList.get(i).getF()){
+                i++;
+              }
+              openList.add(i, map[n.getY() - 1][n.getX()]);
+            }
           }
         }
       }
@@ -105,6 +115,16 @@ public class Entity{
             map[n.getY() + 1][n.getX()].setG(newG);
             map[n.getY() + 1][n.getX()].setH(newH);
             map[n.getY() + 1][n.getX()].setLastNode(n);
+            
+            if(openList.isEmpty()){
+              openList.add(map[n.getY() + 1][n.getX()]);
+            } else {
+              int i = 0;
+              while(newF >= openList.get(i).getF()){
+                i++;
+              }
+              openList.add(i, map[n.getY() + 1][n.getX()]);
+            }
           }
         }
       }
@@ -134,6 +154,16 @@ public class Entity{
             map[n.getY()][n.getX() + 1].setG(newG);
             map[n.getY()][n.getX() + 1].setH(newH);
             map[n.getY()][n.getX() + 1].setLastNode(n);
+            
+            if(openList.isEmpty()){
+              openList.add(map[n.getY()][n.getX() + 1]);
+            } else {
+              int i = 0;
+              while(newF >= openList.get(i).getF()){
+                i++;
+              }
+              openList.add(i, map[n.getY()][n.getX() + 1]);
+            }
           }
         }
       }
@@ -163,6 +193,16 @@ public class Entity{
             map[n.getY()][n.getX() - 1].setG(newG);
             map[n.getY()][n.getX() - 1].setH(newH);
             map[n.getY()][n.getX() - 1].setLastNode(n);
+            
+            if(openList.isEmpty()){
+              openList.add(map[n.getY()][n.getX() - 1]);
+            } else {
+              int i = 0;
+              while(newF >= openList.get(i).getF()){
+                i++;
+              }
+              openList.add(i, map[n.getY()][n.getX() - 1]);
+            }
           }
         }
       }
